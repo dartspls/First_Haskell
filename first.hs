@@ -25,3 +25,15 @@ circumference r = 2 * pi * r
 
 circumference' :: Double -> Double
 circumference' r = 2 * pi * r
+
+-- this is a comment
+-- head :: [a] -> a
+-- this means that head takes a list of <something> and returns one of <something>
+-- type variables.
+
+quicksort :: Ord a => [a] -> [a]
+quicksort [] = []
+quicksort (x : xs) = quicksort ys ++ [x] ++ quicksort zs
+  where
+    ys = [a | a <- xs, a < x]
+    zs = [b | b <- xs, b > x]
